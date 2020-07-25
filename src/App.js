@@ -4,17 +4,18 @@ import ProgressBar from './components/ProgressBar';
 import Plus from './components/Other/Plus';
 import Equal from './components/Other/Equal';
 import Card from './components/Card';
-import DateInput from './components/DateInput'
-;import './App.css';
+import DateInput from './components/DateInput';
+import './App.css';
+
 
 class App extends React.Component{
   constructor(){
     super();
     this.state={
-      dateFrom: '', 
-      dateTo: '',
-      date: '',
-      days:0
+      dateFrom: new Date().toISOString().substr(0,10), 
+      dateTo: new Date().toISOString().substr(0,10),
+      date: new Date().toISOString().substr(0,10),
+      days:0,
     };
     this.handleChange=this.handleChange.bind(this);
   }
@@ -27,7 +28,7 @@ class App extends React.Component{
     return(
       <React.Fragment>
         <DateTime />
-        <div className="box">
+        <div className="progress">
           <ProgressBar />
         </div>
         <div className="box">
@@ -36,7 +37,9 @@ class App extends React.Component{
             value={this.state.date}
             onChange={this.handleChange}
           />
-          <Plus />
+          <Plus 
+            type={1}
+          />
           <input 
             type="number" 
             name="days"
@@ -44,7 +47,7 @@ class App extends React.Component{
             onChange={this.handleChange}
           />
             <Equal />
-            <Card 
+              <Card 
               type={1}
               date= {this.state.date}
               days= {this.state.days}
@@ -57,18 +60,21 @@ class App extends React.Component{
             value={this.state.dateFrom}
             onChange={this.handleChange}
           />
-          <Plus />
+          <Plus 
+          type={0}
+          />
           <DateInput 
             name={"dateTo"}
             value={this.state.dateTo}
             onChange={this.handleChange}
           />
           <Equal />
-            <Card 
+          <Card 
               type={2}
               dateFrom= {this.state.dateFrom}
               dateTo= {this.state.dateTo}
             />
+            
         </div>
           {console.log(this.state.dateFrom + " " +this.state.dateTo)}
       </React.Fragment>

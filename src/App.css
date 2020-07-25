@@ -1,5 +1,84 @@
 .box{
   background-color: #cdcdcdcd;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  padding-top:20px;
+  height:130px;
+  padding-bottom: 10px;
+  padding-left:250px;
+}
+input{
+  height: 60px;
+  width:170px;
+  margin: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+}
+.progress{
+  background-color: #cdcdcdcd;
   padding:20px;
+  height:110px;
+}
+#card{
+  display:inline-block;
+  background-color:white;
+  margin-left:20px;
+  padding:15px;
+  text-align: center;
+  width: 150px;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+}
+.date{
+  font-size: 18px;  
+  text-align: right;
+  height: 40px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  color:white;
+  background-color:black;
+}
+#dateTime{
+  text-align:left;
+  position:absolute;
+  padding-left:20px;
+  font-size: 22px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  margin-top: -2px;
+}
+.progressBar{
+  padding-top: 15px;
+  padding-bottom:50px;
+}
+.progBackground{
+  background-color:#c0c0c0;
+  margin-left: 18%;
+}
+.progText{
+  width:10%;
+  float: left;
+  padding-top:10px;
+}
+#left{
+  width:45%;
+  float:left;
+  padding-right: 65px;
+}
+#right{
+  width:45%;
+  float:right;
+}
+#line{
+  display: inline-block;
+  border-left: 3px solid black;
+  height:152px;
+  margin-top: -37px;
+  padding-left: 50px;
+}
+.equalPlus{
+  display:inline;
+  margin:10px;
 }
